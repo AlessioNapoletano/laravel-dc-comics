@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('' , ComicsController::class);
+Route::resource('comics' , ComicsController::class);
