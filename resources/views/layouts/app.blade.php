@@ -9,7 +9,9 @@
     </title>
 
     @vite('resources/js/app.js')
+
 </head>
+
 <body>
     <header>
         <h1 class="text-center">
@@ -18,7 +20,7 @@
     </header>
 
     <main>
-        @yield('main-conten')
+        @yield('main-content')
     </main>
     
 </body>
