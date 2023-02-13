@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('comics' , ComicsController::class);
+// Route::get('/comics' , [ComicsController::class, 'index']);
+// Route::get('/comics/{id}' , [ComicsController::class, 'show'])->name('show');
+
+//Crea in automatico tutte le rotte, a partire dall'URI da noi specificato, in questo caso /comics
+Route::resource('comics', ComicsController::class);
