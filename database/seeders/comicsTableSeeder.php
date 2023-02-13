@@ -6,7 +6,7 @@ use App\Models\Comic as Comic;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class comicsTableSeeder extends Seeder
+class ComicsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
