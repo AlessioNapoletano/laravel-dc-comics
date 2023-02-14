@@ -21,7 +21,9 @@
             DC Comics
         </h1>
 
-        <a href="/comics">Torna a casa</a>
+        <a href="{{ route('comics.create')}} " class="btn btn-primary">Crea una nuova riga</a>
+
+        <a href="{{ route('comics.index') }}" class="btn btn-success">Torna Alla Admin Home</a>
     </header>
 
     <main>

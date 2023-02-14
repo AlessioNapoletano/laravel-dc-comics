@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComicsController as ComicsController;
+use App\Http\Controllers\Guest\HomeController as GuestHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/comics' , [ComicsController::class, 'index']);
 // Route::get('/comics/{id}' , [ComicsController::class, 'show'])->name('show');
 
+Route::get('/', [GuestHomeController::class, 'home']);
 //Crea in automatico tutte le rotte, a partire dall'URI da noi specificato, in questo caso /comics
 Route::resource('comics', ComicsController::class);
