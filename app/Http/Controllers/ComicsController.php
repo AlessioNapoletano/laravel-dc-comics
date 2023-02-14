@@ -31,9 +31,4 @@ class ComicsController extends Controller
         return view('comics.show', compact('comic'));
     }
 
-    public function destroy($id) {
-        $user = Comic::find($id);
-        $user->delete();
-        return redirect('/comics');
-      }
 }
