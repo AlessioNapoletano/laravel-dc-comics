@@ -6,6 +6,7 @@ use App\Models\Comic as Comic;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class ComicsController extends Controller
 {
@@ -42,5 +43,22 @@ class ComicsController extends Controller
         $newComic->save();
 
         return redirect()->route('comics.show', $newComic->id);
+    }
+
+    public function edit(Comic $comic) {
+        return view('comics.edit', compact('comic'));
+    }
+
+    public function update(Request $request, Comic $comic) {
+        $comic->update($request->all());
+
+        return redirect()->route('comics.show', $comic->id);
+
+    }
+
+    public function destroy(Comic $comic) {
+        $comic->delete();
+        
+        return redirect()->route('comics.index');
     }
 }
