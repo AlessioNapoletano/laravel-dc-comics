@@ -24,10 +24,17 @@
                             <td>{{ $comic->title }}</td>
                             <td>{{ $comic->price }}</td>
                             <td>{{ $comic->sale_date }}</td>
-                            <td> 
-                                <a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">
+                            <td class="d-flex"> 
+                                <a class="btn btn-primary me-1" href="{{ route('comics.show', $comic->id) }}">
                                     show
                                 </a>
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning me-1">edit</a>
+
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     </tbody>
