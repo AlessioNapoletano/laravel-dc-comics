@@ -52,7 +52,8 @@ class ComicsController extends Controller
 
             ],
             [
-                "title.required" => "Devi inserire il titolo, non è che puoi non inserirlo LO DEVI INSERIRE"
+                "title.required" => "Devi inserire il titolo, non è che puoi non inserirlo LO DEVI INSERIRE",
+                "description.required" => "E dove vai, A' Descrizione Un Ce La Metti"
             ]);
         $data = $request->all();
         $newComic->fill($data);
