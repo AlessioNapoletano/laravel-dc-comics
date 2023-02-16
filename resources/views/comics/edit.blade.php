@@ -25,8 +25,9 @@
 
         <div class="mb-3">
             <label for="description" class="form-label fw-bold">Descrizione: </label>
-            <input type="text" id="description" name="description" class="form-control" 
-            value="{{ old('description') ?? $comic->description }}">
+            <textarea type="text" id="description" name="description" class="form-control"> 
+                {{ old('description') ?? $comic->description }}"
+            </textarea>
         </div>
 
         <div class="mb-3">
