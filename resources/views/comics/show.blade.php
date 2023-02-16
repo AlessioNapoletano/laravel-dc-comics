@@ -48,6 +48,17 @@
                             {{ $comic->type }} 
                         </span>
                     </p>
+
+                    <div class="button text-center">
+                        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning me-1">Edit</a>
+                        <form class="d-inline" action="{{ route('comics.destroy', $comic->id) }}"
+                            method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
