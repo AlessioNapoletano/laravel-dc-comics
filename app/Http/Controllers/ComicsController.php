@@ -33,6 +33,7 @@ class ComicsController extends Controller
     }
 
     public function create() {
+
         return view('comics.create');
     }
 
@@ -40,7 +41,7 @@ class ComicsController extends Controller
         $newComic = new Comic();
         $request->validate(
             [
-                "title" => "required",
+                "title" => "required|min:2",
                 "description" => "required",
                 "thumb" => "required",
                 "description" => "required",
